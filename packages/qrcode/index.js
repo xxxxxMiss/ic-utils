@@ -1,4 +1,4 @@
-import { isString, isPureObj, isFn } from '../util/check'
+import { isString, isPureObj, isFn } from '../util'
 
 const handler = (el, value) => {
   return import('qrcodejs2').then(m => {

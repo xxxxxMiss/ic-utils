@@ -1,5 +1,12 @@
 {
   "lerna": "2.0.0-beta.37",
+  "commands": {
+    "publish": {
+      "ignore": [
+        "axios", "dictionary", "format", "jsonp"
+      ]
+    }
+  },
   "packages": [
     "packages/*"
   ],

@@ -3,13 +3,13 @@
 
 ## Install
 ```
-$ npm i ic-clipboard || yarn add ic-clipboard
+$ npm i ic-vue-clipboard || yarn add ic-vue-clipboard
 ```
 
 ## Usage
 ```
 import Vue from 'vue'
-import IcClipboard from 'ic-clipboard'
+import IcClipboard from 'ic-vue-clipboard'
 
 Vue.use(IcClipboard)
 ```

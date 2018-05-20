@@ -1,19 +1,17 @@
 {
-  "name": "ic-vue-share",
+  "name": "ic-utils",
   "version": "1.0.1",
-  "description": "a wrapper based on wechat-share",
+  "description": "A common assertion library is convenient for daily development",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share"
+    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/util"
   },
   "keywords": [
-    "wechat",
-    "share",
-    "vue"
+    "assertion"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"

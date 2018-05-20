@@ -3,7 +3,7 @@
 
 ## Install
 ```
-$ npm i ic-qrcode || yarn add ic-qrcode
+$ npm i ic-vue-qrcode || yarn add ic-vue-qrcode
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ $ npm i ic-qrcode || yarn add ic-qrcode
 
 ```
 import Vue from 'vue'
-import IcQRCode from 'ic-qrcode'
+import IcQRCode from 'ic-vue-qrcode'
 
 Vue.use(IcQRCode)
 ```
@@ -21,7 +21,7 @@ Vue.use(IcQRCode)
 ### As a scoped directive
 
 ```
-import { qrcodeDirective } from 'ic-qrcode'
+import { qrcodeDirective } from 'ic-vue-qrcode'
 
 {
     directives: {

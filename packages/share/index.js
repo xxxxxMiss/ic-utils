@@ -1,7 +1,7 @@
 import jsonp from 'jsonp'
 import wx from 'weixin-js-sdk'
 
-import { isiOS } from '../util/env'
+import { isIOS } from '../util'
 
 function configAuthQuery () {
   const url = window.location.href.split('#')[0]
@@ -67,7 +67,7 @@ function enableWechatShare (options, config, jsApiList) {
 
   const authFn = typeof options.authFn === 'function' && options.authFn
 
-  if (isiOS && !window.hasAuth || !isiOS) {
+  if (isIOS && !window.hasAuth || !isIOS) {
     window.hasAuth = true
     if (authFn) {
       const pr = authFn()
@@ -80,7 +80,7 @@ function enableWechatShare (options, config, jsApiList) {
     } else {
       myAuth(options, config, jsApiList)
     }
-  } else if (isiOS && window.hasAuth) {
+  } else if (isIOS && window.hasAuth) {
     jsApiConfig(config, jsApiList)
   }
 }

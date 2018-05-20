@@ -1,14 +1,14 @@
 ## Install
 You can get it from npm.
 ``` sh
-$ npm i ic-share || yarn add ic-share
+$ npm i ic-vue-share || yarn add ic-vue-share
 ```
 
 ## Usage
 
 ```
 import Vue from 'vue'
-import IcShare from 'ic-share'
+import IcShare from 'ic-vue-share'
 
 Vue.use(IcShare, options)
 ```

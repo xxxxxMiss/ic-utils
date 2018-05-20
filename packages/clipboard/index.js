@@ -1,4 +1,4 @@
-import { isPureObj, isFn, isString } from '../util/check'
+import { isPureObj, isFn, isString } from '../util'
 
 const handler = (el, { value, modifiers, arg }) => {
   return import('clipboard').then(m => {

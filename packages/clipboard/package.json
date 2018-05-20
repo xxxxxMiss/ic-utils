@@ -1,19 +1,18 @@
 {
-  "name": "ic-vue-share",
+  "name": "ic-vue-clipboard",
   "version": "1.0.1",
-  "description": "a wrapper based on wechat-share",
+  "description": "An encapsulation of clipboard.js for convenient using in vue.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share"
+    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard"
   },
   "keywords": [
-    "wechat",
-    "share",
-    "vue"
+    "vue",
+    "clipboard.js"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"

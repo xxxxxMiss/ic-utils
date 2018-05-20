@@ -1,6 +1,6 @@
 {
   "name": "ic-axios",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an extension based on axios",
   "main": "index.js",
   "scripts": {

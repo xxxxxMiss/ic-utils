@@ -5,6 +5,7 @@
   "main": "commitlint.config.js",
   "dependencies": {},
   "scripts": {
+    "pub": "sudo lerna publish --conventional-commits",
     "commitmsg": "commitlint -e $GIT_PARMAS",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

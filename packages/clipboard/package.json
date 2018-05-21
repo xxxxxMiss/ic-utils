@@ -15,7 +15,8 @@
     "clipboard.js"
   ],
   "dependencies": {
-    "ic-utils": "^1.0.3"
+    "ic-utils": "^1.0.3",
+    "clipboard": ""
   },
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"

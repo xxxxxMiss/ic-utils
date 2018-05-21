@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-share",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a wrapper based on wechat-share",
   "main": "index.js",
   "scripts": {

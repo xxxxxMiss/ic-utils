@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-clipboard",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An encapsulation of clipboard.js for convenient using in vue.js",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "clipboard.js"
   ],
   "dependencies": {
-    "ic-utils": "^1.0.3",
-    "clipboard": ""
+    "clipboard": "",
+    "ic-utils": "^1.0.3"
   },
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"

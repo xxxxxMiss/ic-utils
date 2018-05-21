@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-share",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a wrapper based on wechat-share",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "vue"
   ],
   "dependencies": {
-    "ic-utils": "^1.0.2"
+    "ic-utils": "^1.0.3"
   },
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"

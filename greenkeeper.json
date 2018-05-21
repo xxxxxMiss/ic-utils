@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/axios/package.json",
+        "packages/clipboard/package.json",
+        "packages/format/package.json",
+        "packages/qrcode/package.json",
+        "packages/share/package.json",
+        "packages/util/package.json"
+      ]
+    }
+  }
+}

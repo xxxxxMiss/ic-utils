@@ -1,7 +1,7 @@
 import jsonp from 'jsonp'
 import wx from 'weixin-js-sdk'
 
-import { isIOS } from '../util'
+import { isIOS } from 'ic-utils'
 
 function configAuthQuery () {
   const url = window.location.href.split('#')[0]

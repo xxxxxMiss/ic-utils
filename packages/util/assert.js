@@ -1,5 +1,5 @@
-const isString = value => typeof value === 'string'
+export const isString = value => typeof value === 'string'
 
-const isPureObj = value => ({}).toString.call(value) === '[Object object]'
+export const isPureObj = value => ({}).toString.call(value) === '[object Object]'
 
-const isFn = value => typeof value === 'function'
+export const isFn = value => typeof value === 'function'

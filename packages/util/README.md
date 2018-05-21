@@ -7,10 +7,10 @@
 > returned true if the type of a value is string, or false
 
 ### isPureObj(value)
-> returned true if the type of a value if object({}), or false
+> returned true if the type of a value is object({}), or false
 
 ### isFn(value)
-> returned true if the type of a value if function, or false
+> returned true if the type of a value is function, or false
 
 ## Constants
 

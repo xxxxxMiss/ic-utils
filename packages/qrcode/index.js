@@ -1,4 +1,4 @@
-import { isString, isPureObj, isFn } from '../util'
+import { isString, isPureObj, isFn } from 'ic-utils'
 
 const handler = (el, value) => {
   return import('qrcodejs2').then(m => {

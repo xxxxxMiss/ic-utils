@@ -1,4 +1,4 @@
-import { isPureObj, isFn, isString } from '../util'
+import { isPureObj, isFn, isString } from 'ic-utils'
 
 const handler = (el, { value, modifiers, arg }) => {
   return import('clipboard').then(m => {

@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-qrcode",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An encapsulation of qrcodejs2 for convenient using in vue.js",
   "main": "dist/index.js",
   "scripts": {
@@ -16,10 +16,13 @@
     "vue"
   ],
   "dependencies": {
-    "ic-utils": "^1.0.5",
+    "ic-utils": "^1.0.6",
     "qrcodejs2": "^0.0.2"
   },
-  "externals": ["qrcodejs2", "ic-utils"],
+  "externals": [
+    "qrcodejs2",
+    "ic-utils"
+  ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"
 }

@@ -18,6 +18,7 @@
     "clipboard": "",
     "ic-utils": "^1.0.5"
   },
+  "externals": ["clipboard", "ic-utils"],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC"
 }

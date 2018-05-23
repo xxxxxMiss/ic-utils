@@ -2,8 +2,10 @@
   "name": "ic-utils",
   "version": "1.0.5",
   "description": "A common assertion library is convenient for daily development",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "webpack --progress && npm run build:uglify",
+    "build:uglify": "webpack --env.production --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,6 +15,13 @@
   "keywords": [
     "assertion"
   ],
+  "files": [
+    "dist",
+    "index.js"
+  ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "uppercamelcase": "^3.0.0"
+  }
 }

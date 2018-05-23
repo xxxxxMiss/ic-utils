@@ -22,6 +22,14 @@ function getConfig ({ path, library, externals }) {
       path: distPath,
       library,
       libraryTarget: 'umd',
+    },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          loader: 'babel-loader'
+        }
+      ]
     }
   }
   if (externals) {

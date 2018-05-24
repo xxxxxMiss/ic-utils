@@ -12,7 +12,22 @@
 ### isFn(value)
 > returned true if the type of a value is function, or false
 
+### isBool(value)
+> returned true if the type of a value is boolean, or false
+
+### isArray(value)
+> returned true if the type of a value is Array, or false
+
 ## Constants
 
 ### isIOS
 > returned true if current platform is IOS, or false
+
+### isAndroid
+> returned true if current platform is Android, or false
+
+### isWechat
+> returned true if current platform is wechat(weixin), or false
+
+### isMobile
+> returned true if current device is mobile（include ipad）, or false

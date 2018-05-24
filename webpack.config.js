@@ -22,11 +22,13 @@ function getConfig ({ path, library, externals }) {
       path: distPath,
       library,
       libraryTarget: 'umd',
+      // umdNamedDefine: true
     },
     module: {
       rules: [
         {
           test: /\.js$/,
+          exclude: /(node_modules)/,
           loader: 'babel-loader'
         }
       ]

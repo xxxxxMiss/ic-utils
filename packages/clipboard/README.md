@@ -34,7 +34,8 @@ new ClipboardJS('.btn', {
 In Vue, do the same stuff with an arg.
 
 ### arg
-> It should be an css selector.
+> Will copy text from it.
+> It should be an similar css selector.
 > Note: you should exclude the prefix of an css selector. For example:
 > an class selector `.class-name`, than the arg is `class-name`;
 > an id selector `#id`, than the arg is `id`.
@@ -63,33 +64,39 @@ In Vue, do the same stuff with a string value
 </div>
 ```
 
-> There are cases where you'd like to show feedback or capture what has been selected after a copy/cut operation. Do it like this:
+> When you want to get more controls with copy, you can pass an object with options. eg: Using the directive in a component and the clicked element is a child of this component, you can pass a `trigger` option etc. A example as below:
 
 ```
 // template
-<div v-copy="clipboardFeedback">
+// trigger is a css select: #id, .class-name...
+<div v-copy="{ trigger: '#id', enable, success, error }">
     
 </div>
 
-// script
-{   
+import { isWechat } from 'ic-utils'
+
+<script>
+    data () {
+        return {
+            enable: !isWechat,
+        }
+    },
     methods: {
-        clipboardFeedback () {
-            return {
-                success: () => { // ... },
-                error: () => { // ... }
-            }
+        success () {
+            // your logic code is here when copied
+        },
+        error () {
+            // your handler when occured error
         }
     }
-}
+</script>
 ```
 
-Note: If the `clipboardFeedback` don't return an object but an function than we regard it as a success callback.
 
 > If you want to cut texts in form elements as `input` `textarea`, you can use modifier `cut`.
 
 ```
-<div v-copy.cut="clipboardFeedback">
+<div v-copy.cut="{}">
     
 </div>
 ```

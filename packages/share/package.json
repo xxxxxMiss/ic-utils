@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-share",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "a wrapper based on wechat-share",
   "main": "dist/index.js",
   "module": "index.js",
@@ -17,7 +17,7 @@
     "vue"
   ],
   "dependencies": {
-    "ic-utils": "^1.0.11",
+    "ic-utils": "^1.0.12",
     "weixin-js-sdk": ""
   },
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",

@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-clipboard",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "An encapsulation of clipboard.js for convenient using in vue.js",
   "main": "dist/index.js",
   "module": "index.js",
@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "clipboard": "",
-    "ic-utils": "^1.0.12"
+    "ic-utils": "^1.0.14"
   },
   "externals": [
     "clipboard",

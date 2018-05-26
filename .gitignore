@@ -17,6 +17,7 @@ examples/**/dist
 
 # Coverage support
 coverage
+.nyc_output
 *.lcov
 .nyc_output
 .vscode

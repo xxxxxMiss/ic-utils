@@ -16,7 +16,7 @@ function getConfig ({ path, library, externals }) {
   const config = {
     devtool: 'source-map',
     mode: isProd ? 'production' : 'development',
-    entry: `${path}/index.js`,
+    entry: `${path}/src/index.js`,
     output: {
       filename: `index.${isProd ? 'min.' : '' }js`,
       path: distPath,

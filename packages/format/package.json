@@ -2,7 +2,8 @@
   "name": "ic-format",
   "version": "1.0.1",
   "description": "a bussiness formating library to format date, time, amount etc ",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

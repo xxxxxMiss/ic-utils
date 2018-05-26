@@ -3,7 +3,7 @@
   "version": "1.0.12",
   "description": "a wrapper based on wechat-share",
   "main": "dist/index.js",
-  "module": "index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

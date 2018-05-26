@@ -1,4 +1,4 @@
-const UA = navigator.userAgent
+const UA = window.navigator.userAgent
 
 export const isIOS = /\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(UA)
 

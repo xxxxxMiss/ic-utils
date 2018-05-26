@@ -3,7 +3,7 @@
   "version": "1.0.14",
   "description": "A common assertion library is convenient for daily development",
   "main": "dist/index.js",
-  "module": "index.js",
+  "module": "src/index.js",
   "scripts": {
     "build": "webpack --progress && npm run build:uglify",
     "build:uglify": "webpack --env.production --progress",

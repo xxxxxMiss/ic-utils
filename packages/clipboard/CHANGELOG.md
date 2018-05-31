@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.13"></a>
+## [1.0.13](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/compare/ic-vue-clipboard@1.0.12...ic-vue-clipboard@1.0.13) (2018-05-31)
+
+
+
+
+**Note:** Version bump only for package ic-vue-clipboard
+
 <a name="1.0.10"></a>
 ## [1.0.10](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/compare/ic-vue-clipboard@1.0.9...ic-vue-clipboard@1.0.10) (2018-05-24)
 

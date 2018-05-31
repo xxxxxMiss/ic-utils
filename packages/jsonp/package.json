@@ -1,0 +1,16 @@
+{
+  "name": "ic-jsonp",
+  "version": "1.1.0",
+  "description": "A lightly library for rapid daily development",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/jsonp"
+  },
+  "keyword": [
+    "jsonp"
+  ],
+  "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
+  "license": "MIT"
+}

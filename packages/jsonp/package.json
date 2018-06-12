@@ -1,6 +1,6 @@
 {
   "name": "ic-jsonp",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A lightly library for rapid daily development",
   "main": "dist/index.js",
   "module": "src/index.js",

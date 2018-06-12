@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-qrcode",
-  "version": "1.0.15",
+  "version": "1.1.0",
   "description": "An encapsulation of qrcodejs2 for convenient using in vue.js",
   "main": "dist/index.js",
   "module": "src/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "ic-format",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "a bussiness formating library to format date, time, amount etc ",
   "main": "dist/index.js",
   "module": "src/index.js",

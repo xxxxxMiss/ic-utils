@@ -29,7 +29,10 @@ const handler = (el, value) => {
       }
     }
 
-    return new QRCode(el, DEFAULTS)
+    if (DEFAULTS.text.trim() && (DEFAULTS.enable === void 0 || DEFAULTS.enable)) {
+      delete DEFAULTS.enable
+      return new QRCode(el, DEFAULTS)
+    }
   })
 }
 

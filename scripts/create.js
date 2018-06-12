@@ -13,10 +13,11 @@ if (!pkgName) {
 }
 
 const pkgPath = path.resolve(__dirname, '../packages')
+fs.mkdirSync(path.join(pkgPath, pkgName))
+
 const pkgs = fs.readdirSync(pkgPath)
 const packagePrefix = require(path.resolve(__dirname, '../package.json')).packagePrefix
 
-fs.mkdirSync(path.join(pkgPath, pkgName))
 
 pkgs.forEach(p => {
   const pkgJson = path.join(pkgPath, p, 'package.json')

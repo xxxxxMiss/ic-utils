@@ -66,3 +66,13 @@ in template:
 
 > The `value` can be a string, an object and a function returned a string or an object.
 
+**NOTE**
+> When you want to show qrcode in specified conditions, for examples: in `wechat` platform don't show it and showing in common browsers, you can pass an `enable` in value.
+
+```
+{
+    text: '',
+    // ...,
+    enable: !isWechat
+}
+```

@@ -3,7 +3,7 @@
   "commands": {
     "publish": {
       "ignore": [
-        "axios", "dictionary", "format", "jsonp"
+        "axios", "dictionary", "format", "jsonp", "validator"
       ]
     }
   },

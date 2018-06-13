@@ -25,14 +25,14 @@ function jsApiConfig (wx, config, jsApiList) {
 }
 
 function configAuth (wx, authParams, shareDataConfig, jsApiList, debug) {
-  // wx.config({
-  //   ...authParams,
-  //   jsApiList,
-  //   debug
-  // })
   wx.config(Object.assign({}, authParams, { jsApiList, debug }))
+
+  // jsApiList is changed by wechat after auth
+  // so split the referance here
+  const jsApiListStr = JSON.stringify(jsApiList)
+
   wx.ready(() => {
-    jsApiConfig(wx, shareDataConfig, jsApiList)
+    jsApiConfig(wx, shareDataConfig, JSON.parse(jsApiListStr))
   })
   wx.error(res => {
     console.log(res)

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/compare/ic-vue-clipboard@1.0.13...ic-vue-clipboard@1.1.0) (2018-06-13)
+
+
+### Features
+
+* add jsonp lib and updated lifecycle in clipboard ([61b3c4a](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/commit/61b3c4a))
+
+
+
+
 <a name="1.0.13"></a>
 ## [1.0.13](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/compare/ic-vue-clipboard@1.0.12...ic-vue-clipboard@1.0.13) (2018-05-31)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.0.17...ic-vue-share@1.1.0) (2018-06-13)
+
+
+### Features
+
+* add jsonp lib and updated lifecycle in clipboard ([61b3c4a](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/commit/61b3c4a))
+
+
+
+
 <a name="1.0.17"></a>
 ## [1.0.17](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.0.16...ic-vue-share@1.0.17) (2018-06-12)
 

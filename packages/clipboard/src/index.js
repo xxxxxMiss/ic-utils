@@ -1,5 +1,7 @@
 import { isPureObj, isString, isBool } from 'ic-utils'
 
+let isCopySuccess = false
+
 const handler = (el, { value, modifiers, arg }) => {
   return import('clipboard').then(m => {
     const options = {}
@@ -9,7 +11,7 @@ const handler = (el, { value, modifiers, arg }) => {
     let error = () => {}
 
     if (isPureObj(value)) {
-      trigger = document.querySelector(value.trigger) || trigger
+      trigger = value.trigger || trigger
       success = value.success || success
       error = value.error || error
       if (isBool(value.enable)) {
@@ -44,12 +46,15 @@ const handler = (el, { value, modifiers, arg }) => {
     } else {
       clipboard = new ClipboardJS(trigger, options)
     }
-
-    clipboard.on('success', e => {
-      // only effective with `target` option
-      // modifiers.clear && e.clearSelection()
-      success()
-    })
+    
+    if (!isCopySuccess) {
+      clipboard.on('success', e => {
+        isCopySuccess = true
+        // only effective with `target` option
+        // modifiers.clear && e.clearSelection()
+        success()
+      })
+    }
 
     clipboard.on('error', e => {
       error()
@@ -64,8 +69,12 @@ export default Vue => {
     bind (el, binding) {
       handler(el, binding)
     },
-    update (el, binding) {
-      handler(el, binding)
+    update (el, binding, vnode, oldVnode) {
+      const vCopy = vnode.data.directives.find(item => item.name === 'copy' || item.rawName === 'v-copy')
+      const voldCopy = oldVnode.data.directives.find(item => item.name === 'copy' || item.rawName === 'v-copy')
+      if (vCopy.expression !== voldCopy.expression) {
+        handler(el, binding)
+      }
     },
     unbind (el, binding) {
       const clipboard = el.__target

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/compare/ic-vue-clipboard@1.1.0...ic-vue-clipboard@1.1.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* **clipboard:** bind event repeatly and avoid noneed update ([2431d49](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/commit/2431d49))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/clipboard/compare/ic-vue-clipboard@1.0.13...ic-vue-clipboard@1.1.0) (2018-06-13)
 

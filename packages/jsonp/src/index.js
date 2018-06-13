@@ -1,5 +1,4 @@
-let count = 0
-
+let count = 0;
 function noop(){}
 
 /**
@@ -16,58 +15,58 @@ function noop(){}
  * @param {Function} optional callback
  */
 
-function jsonp (url, opts, fn) {
+export default function (url, opts, fn){
   if ('function' == typeof opts) {
-    fn = opts
-    opts = {}
+    fn = opts;
+    opts = {};
   }
-  if (!opts) opts = {}
+  if (!opts) opts = {};
 
-  var prefix = opts.prefix || '__jp'
+  let prefix = opts.prefix || '__jp';
   // use the callback name that was passed if one was provided.
   // otherwise generate a unique name by incrementing our counter.
-  var id = opts.name || (prefix + (count++))
-  // var id = opts.name || prefix
-  var param = opts.param || 'callback'
-  var timeout = null != opts.timeout ? opts.timeout : 60000
-  var enc = encodeURIComponent
-  var target = document.getElementsByTagName('script')[0] || document.head
-  var script
-  var timer
+  let id = opts.name || (prefix + (count++));
+  // let id = opts.name || prefix;
+  let param = opts.param || 'callback';
+  let timeout = null != opts.timeout ? opts.timeout : 60000;
+  let enc = encodeURIComponent;
+  let target = document.getElementsByTagName('script')[0] || document.head;
+  let script;
+  let timer;
 
 
   if (timeout) {
     timer = setTimeout(function(){
-      cleanup()
-      if (fn) fn(new Error('Timeout'))
-    }, timeout)
+      cleanup();
+      if (fn) fn(new Error('Timeout'));
+    }, timeout);
   }
 
   function cleanup(){
-    if (script.parentNode) script.parentNode.removeChild(script)
-    window[id] = noop
-    if (timer) clearTimeout(timer)
+    if (script.parentNode) script.parentNode.removeChild(script);
+    window[id] = noop;
+    if (timer) clearTimeout(timer);
   }
 
   function cancel(){
     if (window[id]) {
-      cleanup()
+      cleanup();
     }
   }
 
   window[id] = function(data){
-    cleanup()
-    if (fn) fn(null, data)
-  }
+    cleanup();
+    if (fn) fn(null, data);
+  };
 
   // add qs component
-  url += (~url.indexOf('?') ? '&' : '?') + param + '=' + id + prefix
-  url = url.replace('?&', '?')
+  url += (~url.indexOf('?') ? '&' : '?') + param + '=' + id + prefix;
+  url = url.replace('?&', '?');
 
   // create script
-  script = document.createElement('script')
-  script.src = url
-  target.parentNode.insertBefore(script, target)
+  script = document.createElement('script');
+  script.src = url;
+  target.parentNode.insertBefore(script, target);
 
-  return cancel
+  return cancel;
 }

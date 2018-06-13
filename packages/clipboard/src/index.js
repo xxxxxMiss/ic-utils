@@ -38,7 +38,12 @@ const handler = (el, { value, modifiers, arg }) => {
     }
     
     const ClipboardJS = m.default || m
-    const clipboard = new ClipboardJS(trigger, options)
+    let clipboard = null
+    if (el.__target) {
+      clipboard = el.__target
+    } else {
+      clipboard = new ClipboardJS(trigger, options)
+    }
 
     clipboard.on('success', e => {
       // only effective with `target` option
@@ -59,14 +64,14 @@ export default Vue => {
     bind (el, binding) {
       handler(el, binding)
     },
-    // update (el, binding) {
-    //   handler(el, binding)
-    // },
+    update (el, binding) {
+      handler(el, binding)
+    },
     unbind (el, binding) {
       const clipboard = el.__target
       if (clipboard) {
         clipboard.destroy()
-        delete clipboard.__target
+        delete el.__target
       }
     }
   })

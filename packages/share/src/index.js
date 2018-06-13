@@ -1,6 +1,3 @@
-import jsonp from 'jsonp'
-import wx from 'weixin-js-sdk'
-
 import { isIOS } from 'ic-utils'
 
 function configAuthQuery () {
@@ -21,44 +18,50 @@ function configAuthQuery () {
  * @param  {[type]} jsApiList ['onMenuShareTimeline', 'onMenuShareAppMessage']
  * @return {[type]}           [description]
  */
-function jsApiConfig (config, jsApiList) {
+function jsApiConfig (wx, config, jsApiList) {
   jsApiList.forEach(apiKey => {
     wx[apiKey](config[apiKey])
   })
 }
 
-function configAuth (authParams, shareDataConfig, jsApiList, debug) {
-  wx.config({
-    ...authParams,
-    jsApiList,
-    debug
-  })
+function configAuth (wx, authParams, shareDataConfig, jsApiList, debug) {
+  // wx.config({
+  //   ...authParams,
+  //   jsApiList,
+  //   debug
+  // })
+  wx.config(Object.assign({}, authParams, { jsApiList, debug }))
   wx.ready(() => {
-    jsApiConfig(shareDataConfig, jsApiList)
+    jsApiConfig(wx, shareDataConfig, jsApiList)
   })
   wx.error(res => {
     console.log(res)
   })
 }
 
-function myAuth (options, shareDataConfig, jsApiList) {
-  jsonp(options.url, configAuthQuery(), (err, data) => {
-    if (err) {
-      throw new Error(err.message)
-    }
+function myAuth (wx, options, shareDataConfig, jsApiList) {
+  // even through this function is not called
+  // code static scan has know it, you must install it manually
+  return import('ic-jsonp').then(m => {
+    const jsonp = m.default || m
+    jsonp(options.url, configAuthQuery(), (err, data) => {
+      if (err) {
+        throw new Error(err.message)
+      }
 
-    const { appId, timestamp, nonceStr, signature } = data.results
+      const { appId, timestamp, nonceStr, signature } = data.results
 
-    configAuth({
-      appId,
-      timestamp,
-      nonceStr,
-      signature
-    }, shareDataConfig, jsApiList, options.debug)
+      configAuth(wx, {
+        appId,
+        timestamp,
+        nonceStr,
+        signature
+      }, shareDataConfig, jsApiList, options.debug)
+    })
   })
 }
 
-function enableWechatShare (options, config, jsApiList) {
+function enableWechatShare (wx, options, config, jsApiList) {
   if (Array.isArray(config)) {
     [config, jsApiList] = [jsApiList, config]
   }
@@ -75,16 +78,15 @@ function enableWechatShare (options, config, jsApiList) {
         throw new Error('authFn must be return a promise')
       }
       pr.then(params => {
-        configAuth(params, config, jsApiList, options.debug)
+        configAuth(wx, params, config, jsApiList, options.debug)
       })
     } else {
-      myAuth(options, config, jsApiList)
+      myAuth(wx, options, config, jsApiList)
     }
   } else if (isIOS && window.hasAuth) {
-    jsApiConfig(config, jsApiList)
+    jsApiConfig(wx, config, jsApiList)
   }
 }
-
 
 export default {
   install (Vue, options) {
@@ -97,17 +99,23 @@ export default {
     }
 
     Vue.prototype.$enableWechatShare = (shareDataConfig, jsApiList) => {
-      wx.showAllNonBaseMenuItem()
-      enableWechatShare(options, shareDataConfig, jsApiList)
+      import('weixin-js-sdk').then(m => {
+        const wx = m.default || m
+        wx.showAllNonBaseMenuItem()
+        enableWechatShare(wx, options, shareDataConfig, jsApiList)
+      })
     }
 
-    Vue.mixin({
-      // env maybe ssr, use it only client-side
-      beforeMount () {
-        if (options.hideAllMenus) {
-          wx.hideAllNonBaseMenuItem()
-        }
-      }
-    })
+    // Vue.mixin({
+    //   // env maybe ssr, use it only client-side
+    //   beforeMount () {
+    //     if (options.hideAllMenus) {
+    //       import('weixin-js-sdk').then(m => {
+    //         const wx = m.default || m
+    //         wx.hideAllNonBaseMenuItem()
+    //       })
+    //     }
+    //   }
+    // })
   }
 }

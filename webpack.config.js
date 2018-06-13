@@ -4,7 +4,6 @@ const _ = require('lodash')
 const uppercamelcase = require('uppercamelcase')
 const webpack = require('webpack')
 const chalk = require('chalk')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 

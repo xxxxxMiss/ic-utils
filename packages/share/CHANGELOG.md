@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.1.0...ic-vue-share@1.1.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* **share:** get a new referance after auth ([4f71f71](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/commit/4f71f71))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.0.17...ic-vue-share@1.1.0) (2018-06-13)
 

@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const chalk = require('chalk')
+const dayjs = require('dayjs')
 
 const pkgName = process.argv.slice(2)[0]
 
@@ -13,7 +14,11 @@ if (!pkgName) {
 }
 
 const pkgPath = path.resolve(__dirname, '../packages')
-fs.mkdirSync(path.join(pkgPath, pkgName))
+const moduleDir = path.join(pkgPath, pkgName)
+const srcDir = path.join(moduleDir, 'src')
+fs.mkdirSync(moduleDir)
+fs.mkdirSync(srcDir)
+fs.writeFileSync(path.join(srcDir, 'index.js'), `/**\n *  created at ${dayjs().format('YYYY/MM/DD HH:mm')} by xxxxxMiss\n */`)
 
 const pkgs = fs.readdirSync(pkgPath)
 const packagePrefix = require(path.resolve(__dirname, '../package.json')).packagePrefix

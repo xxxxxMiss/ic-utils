@@ -1,0 +1,16 @@
+{
+  "name": "ic-vue-focus",
+  "version": "1.0.0",
+  "description": "A Vue directive plugin",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/focus"
+  },
+  "keyword": [
+    "focus"
+  ],
+  "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
+  "license": "MIT"
+}

@@ -1,5 +1,6 @@
 ## Install
 You can get it from npm.
+
 ``` sh
 $ npm i ic-vue-share || yarn add ic-vue-share
 ```
@@ -27,15 +28,8 @@ authFn
 jsApiList
 > An array of interfaces needed to be auth. More informations is [here](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115).
 
-hideAllMenus
-> A boolean which defaults to `true`.
-> Because in an application only some pages need to be shared not all pages. In our scene, use share functionality both `position-list` and `position-detail`. share functionality enabled in one page, it enabled automatically.
-
 debug
 > The option is convenient for developing. A boolean which to set by `process.env.NODE_ENV`. Thats to say, it is `false` when `process.env.NODE_ENV === 'production'`. Of course, you can explicitly passed a boolean value to it.
-
-## `$enableWechatShare(shareDataConfig, jsApiList)`
-> In internal, we mounted only one method `$enableWechatShare` to `Vue.prototype`, so you can use `this.$enableWechatShare` in all components.
 
 ### shareDataConfig
 > Required. An object config jsApiList data.
@@ -101,3 +95,22 @@ method: {
     }
 }
 ```
+
+## `$enableWechatShare(shareDataConfig, jsApiList)`
+> In internal, we mounted a method `$enableWechatShare` to `Vue.prototype`, so you can use `this.$enableWechatShare` in pages will be shared.
+
+## `$setWechatShareUrl`
+> This api for compatibility with ios platform in some special scenarios. We can only use the url of the first opening a page to auth wechat-jsApi once, if you have redirection scenario, you may use the api to set the first url.
+
+For example: Assuming we have three pages, `list`, `home`, `login`. If you have logined and scan a qrcode of login page than redirect to home page, but your shared page is list page. In this case , you should call `$setWechatShareUrl` in home page as below:
+
+home.vue
+```
+{
+    mounted: {
+        this.$setWechatShareUrl(window.location.href)
+    }
+}
+```
+
+If redirecting to page will be shared directly, you need call `$enableWechatShare` in that page only.

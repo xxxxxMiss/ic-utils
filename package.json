@@ -26,6 +26,7 @@
     "chalk": "^2.4.1",
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.5",
+    "dayjs": "^1.6.9",
     "eslint": "^4.19.1",
     "husky": "^0.14.3",
     "lerna": "^2.11.0",

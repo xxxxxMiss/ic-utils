@@ -1,7 +1,9 @@
-import { isIOS } from 'ic-utils'
+import { isIOS, isFn } from 'ic-utils'
 
 function configAuthQuery () {
-  const url = window.location.href.split('#')[0]
+  const url = isIOS
+    ? window.iosFirstUrl
+    : window.location.href.split('#')[0]
   return {
     param: '_callback',
     prefix: `&url=${encodeURIComponent(url)}`,
@@ -10,7 +12,7 @@ function configAuthQuery () {
 }
 
 /**
- * [jsApiConfig description]
+ * [callJsApi description]
  * @param  {[type]} config
  * {
  *   onMenuShareTimeline: {title: '', link: '', imgUrl: '', success: () => {}}
@@ -18,24 +20,27 @@ function configAuthQuery () {
  * @param  {[type]} jsApiList ['onMenuShareTimeline', 'onMenuShareAppMessage']
  * @return {[type]}           [description]
  */
-function jsApiConfig (wx, config, jsApiList) {
+function callJsApi (wx, config, jsApiList) {
+  jsApiList = jsApiList || Object.keys(config)
   jsApiList.forEach(apiKey => {
     wx[apiKey](config[apiKey])
   })
 }
 
 function configAuth (wx, authParams, shareDataConfig, jsApiList, debug) {
-  wx.config(Object.assign({}, authParams, { jsApiList, debug }))
-
   // jsApiList is changed by wechat after auth
   // so split the referance here
   const jsApiListStr = JSON.stringify(jsApiList)
 
+  wx.config(Object.assign({}, authParams, {
+    jsApiList: JSON.parse(jsApiListStr),
+    debug
+  }))
   wx.ready(() => {
-    jsApiConfig(wx, shareDataConfig, JSON.parse(jsApiListStr))
+    callJsApi(wx, shareDataConfig, JSON.parse(jsApiListStr))
   })
   wx.error(res => {
-    console.log(res)
+    console.error(res)
   })
 }
 
@@ -62,13 +67,9 @@ function myAuth (wx, options, shareDataConfig, jsApiList) {
 }
 
 function enableWechatShare (wx, options, config, jsApiList) {
-  if (Array.isArray(config)) {
-    [config, jsApiList] = [jsApiList, config]
-  }
-
   jsApiList = jsApiList || options.jsApiList || Object.keys(config)
 
-  const authFn = typeof options.authFn === 'function' && options.authFn
+  const authFn = isFn(options.authFn) && options.authFn
 
   if (isIOS && !window.hasAuth || !isIOS) {
     window.hasAuth = true
@@ -84,15 +85,14 @@ function enableWechatShare (wx, options, config, jsApiList) {
       myAuth(wx, options, config, jsApiList)
     }
   } else if (isIOS && window.hasAuth) {
-    jsApiConfig(wx, config, jsApiList)
+    callJsApi(wx, config, jsApiList)
   }
 }
 
 export default {
   install (Vue, options) {
-    if (options.hideAllMenus == null) {
-      options.hideAllMenus = true
-    }
+    // in IOS platform, we can only use the entry url
+    window.iosFirstUrl = window.location.href.split('#')[0]
 
     if (options.debug == null) {
       options.debug = process.env.NODE_ENV != 'production'
@@ -101,21 +101,11 @@ export default {
     Vue.prototype.$enableWechatShare = (shareDataConfig, jsApiList) => {
       import('weixin-js-sdk').then(m => {
         const wx = m.default || m
-        wx.showAllNonBaseMenuItem()
         enableWechatShare(wx, options, shareDataConfig, jsApiList)
       })
     }
-
-    // Vue.mixin({
-    //   // env maybe ssr, use it only client-side
-    //   beforeMount () {
-    //     if (options.hideAllMenus) {
-    //       import('weixin-js-sdk').then(m => {
-    //         const wx = m.default || m
-    //         wx.hideAllNonBaseMenuItem()
-    //       })
-    //     }
-    //   }
-    // })
+    
+    // if you have redirection scenario, you should call this api to set window.iosFirstUrl
+    Vue.prototype.$setWechatShareUrl = url => window.iosFirstUrl = url.split('#')[0]
   }
 }

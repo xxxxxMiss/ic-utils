@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.1.2...ic-vue-share@1.1.3) (2018-06-19)
+
+
+
+
+**Note:** Version bump only for package ic-vue-share
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.1.1...ic-vue-share@1.1.2) (2018-06-19)
 

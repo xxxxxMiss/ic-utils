@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-focus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue directive plugin",
   "main": "dist/index.js",
   "module": "src/index.js",

@@ -11,12 +11,12 @@ export default function install (Vue, options = {}) {
     inline: 'nearest'
   }
 
-  let opt = Object.assing({}, DEFAULTS, options)
+  let opt = Object.assign({}, DEFAULTS, options)
 
   Vue.directive('into-view', {
     bind (el, { value }) {
       if (isPureObj(value)) {
-        opt = Object.assing(opt, value)
+        opt = Object.assign(opt, value)
       }
       el.scrollIntoView(opt)
     }

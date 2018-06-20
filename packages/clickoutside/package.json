@@ -1,6 +1,6 @@
 {
   "name": "ic-clickoutside",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lightly library for rapid daily development",
   "main": "dist/index.js",
   "module": "src/index.js",

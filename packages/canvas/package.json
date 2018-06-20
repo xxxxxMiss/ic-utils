@@ -1,6 +1,6 @@
 {
   "name": "ic-canvas",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A lightly library for rapid daily development",
   "main": "dist/index.js",
   "module": "src/index.js",

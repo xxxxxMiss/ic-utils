@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.1.3...ic-vue-share@1.2.0) (2018-06-20)
+
+
+### Features
+
+* add clickoutside and into-view directives ([1494993](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/commit/1494993))
+
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/share/compare/ic-vue-share@1.1.2...ic-vue-share@1.1.3) (2018-06-19)
 

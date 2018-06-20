@@ -1,10 +1,10 @@
-## v-focus
+# v-focus
 > Use this directive on a form element or a component contains form-elements to let the form-elements focus.
 
-## Install
+### Install
 >$ npm i ic-vue-focus || yarn add ic-vue-focus
 
-## Usage
+### Usage
 
 base:
 ``` html

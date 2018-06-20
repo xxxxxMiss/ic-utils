@@ -1,10 +1,10 @@
-## v-into-view
+# v-into-view
 > Use this directive to scroll any an element into view.
 
-## Install
+### Install
 >$ npm i ic-into-view || yarn add ic-into-view
 
-## Usage
+### Usage
 
 with no expression:
 ``` html

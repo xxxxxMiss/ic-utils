@@ -1,12 +1,12 @@
-## Introduction
+# v-qrcode
 > It is an encapsulation of [qrcodejs2](https://www.npmjs.com/package/qrcodejs2) for you using it by directive in Vue.
 
-## Install
+### Install
 ```
 $ npm i ic-vue-qrcode || yarn add ic-vue-qrcode
 ```
 
-## Usage
+### Usage
 > There are two ways you can use it:
 
 ### As a global plugin

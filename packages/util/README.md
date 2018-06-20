@@ -1,33 +1,36 @@
-## Install
+# ic-utils
+> A common assertion library for daily development.
+
+### Install
 > npm i ic-utils || yarn add ic-utils
 
-## Methods
+### Methods
 
-### isString(value)
+#### isString(value)
 > returned true if the type of a value is string, or false
 
-### isPureObj(value)
+#### isPureObj(value)
 > returned true if the type of a value is object({}), or false
 
-### isFn(value)
+#### isFn(value)
 > returned true if the type of a value is function, or false
 
-### isBool(value)
+#### isBool(value)
 > returned true if the type of a value is boolean, or false
 
-### isArray(value)
+#### isArray(value)
 > returned true if the type of a value is Array, or false
 
-## Constants
+### Constants
 
-### isIOS
+#### isIOS
 > returned true if current platform is IOS, or false
 
-### isAndroid
+#### isAndroid
 > returned true if current platform is Android, or false
 
-### isWechat
+#### isWechat
 > returned true if current platform is wechat(weixin), or false
 
-### isMobile
+#### isMobile
 > returned true if current device is mobile（include ipad）, or false

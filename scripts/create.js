@@ -49,6 +49,6 @@ pkgs.forEach(p => {
 
   const readMe = path.join(pkgPath, p, 'README.md')
   if (!fs.existsSync(readMe)) {
-    fs.writeFileSync(readMe, `## Install\n>$ npm i ${name} || yarn add ${name}`)
+    fs.writeFileSync(readMe, `### Install\n>$ npm i ${name} || yarn add ${name}`)
   }
 })

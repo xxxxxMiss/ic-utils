@@ -1,11 +1,14 @@
-## Install
+# ic-vue-share
+> An module about wechat-share for rapid development.
+
+### Install
 You can get it from npm.
 
 ``` sh
 $ npm i ic-vue-share || yarn add ic-vue-share
 ```
 
-## Usage
+### Usage
 
 ```
 import Vue from 'vue'
@@ -96,10 +99,10 @@ method: {
 }
 ```
 
-## `$enableWechatShare(shareDataConfig, jsApiList)`
+### `$enableWechatShare(shareDataConfig, jsApiList)`
 > In internal, we mounted a method `$enableWechatShare` to `Vue.prototype`, so you can use `this.$enableWechatShare` in pages will be shared.
 
-## `$setWechatShareUrl`
+### `$setWechatShareUrl`
 > This api for compatibility with ios platform in some special scenarios. We can only use the url of the first opening a page to auth wechat-jsApi once, if you have redirection scenario, you may use the api to set the first url.
 
 For example: Assuming we have three pages, `list`, `home`, `login`. If you have logined and scan a qrcode of login page than redirect to home page, but your shared page is list page. In this case , you should call `$setWechatShareUrl` in home page as below:

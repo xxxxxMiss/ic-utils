@@ -1,12 +1,12 @@
-## Introduction
+# v-copy
 > It is an encapsulation of [clipboard](https://github.com/zenorocha/clipboard.js) for convenience to use it in Vue.
 
-## Install
+### Install
 ```
 $ npm i ic-vue-clipboard || yarn add ic-vue-clipboard
 ```
 
-## Usage
+### Usage
 ```
 import Vue from 'vue'
 import IcClipboard from 'ic-vue-clipboard'
@@ -20,7 +20,7 @@ Than, you can use it in component as below:
 `v-copy` directive supports `arg`, `modifiers` and `value`.
 If you are not familiar with these concepts, [click here](https://cn.vuejs.org/v2/guide/custom-directive.html)
 
-## Advanced usage
+### Advanced usage
 > In clipboardjs, if you want to dynamically set a `target`, you can do it like this:
 
 ```

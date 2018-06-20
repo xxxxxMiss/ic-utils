@@ -18,7 +18,24 @@ export default function install (Vue, options = {}) {
       if (isPureObj(value)) {
         opt = Object.assign(opt, value)
       }
-      el.scrollIntoView(opt)
+
+      const handler = () => el.scrollIntoView(opt)
+      el.__handler = handler
+
+      const formEl = el.querySelectorAll('input') || el.querySelectorAll('textarea')
+      if (formEl.length) {
+        // proxy event
+        el.addEventListener('focusin', handler)
+      } else {
+        el.scrollIntoView(opt)
+      }
+    },
+    unbind (el) {
+      const handler = el.__handler
+      if (handler) {
+        el.removeEventListener('focusin', handler)
+        delete el.__handler
+      }
     }
   })
 }

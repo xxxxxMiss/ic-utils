@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/compare/ic-into-view@1.1.2...ic-into-view@1.2.0) (2018-06-20)
+
+
+### Features
+
+* use focusin instead of focus ([f588d8a](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/commit/f588d8a))
+
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/compare/ic-into-view@1.1.1...ic-into-view@1.1.2) (2018-06-20)
 

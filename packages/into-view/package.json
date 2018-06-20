@@ -1,6 +1,6 @@
 {
   "name": "ic-into-view",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A lightly library for rapid daily development",
   "main": "dist/index.js",
   "module": "src/index.js",

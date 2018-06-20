@@ -55,7 +55,6 @@ function myAuth (wx, options, shareDataConfig, jsApiList) {
       }
 
       const { appId, timestamp, nonceStr, signature } = data.results
-
       configAuth(wx, {
         appId,
         timestamp,

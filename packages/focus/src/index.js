@@ -19,7 +19,7 @@ export default {
     if (isPureObj(value) && value.block) {
       DEFAULTS.block = value.block
       target.scrollIntoView(DEFAULTS)
-    } else if (modifiers['auto-into-view']) {
+    } else if (modifiers['into-view']) {
       target.scrollIntoView(DEFAULTS)
     }
 

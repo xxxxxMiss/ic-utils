@@ -1,15 +1,15 @@
 {
-  "name": "ic-validator",
+  "name": "ic-vue-track",
   "version": "1.0.0",
-  "description": "A lightly library for rapid daily development",
+  "description": "A Vue directive for statistics",
   "main": "dist/index.js",
   "module": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/validator"
+    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/track"
   },
   "keyword": [
-    "validator"
+    "track"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "MIT"

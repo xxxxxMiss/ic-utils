@@ -10,7 +10,10 @@
     "build": "npm run build:dev && npm run build:prod",
     "build:dev": "cross-env NODE_ENV=development node webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production node webpack.config.js",
-    "create": "node scripts/create.js"
+    "create": "node scripts/create.js",
+    "docs": "node scripts/docs.js",
+    "docs:dev": "npm run docs && vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.49",
@@ -35,8 +38,10 @@
     "require-extension-hooks": "^0.3.2",
     "require-extension-hooks-babel": "^0.1.1",
     "require-extension-hooks-vue": "^1.0.0",
+    "signale": "^1.2.1",
     "uppercamelcase": "^3.0.0",
     "vue": "^2.5.16",
+    "vuepress": "^0.10.2",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
   },

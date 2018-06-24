@@ -1,7 +1,7 @@
 {
-  "name": "ic-validator",
+  "name": "ic-vue-validator",
   "version": "1.0.0",
-  "description": "A lightly library for rapid daily development",
+  "description": "A validation library for Vue.js",
   "main": "dist/index.js",
   "module": "src/index.js",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-track",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Vue directive for statistics",
   "main": "dist/index.js",
   "module": "src/index.js",

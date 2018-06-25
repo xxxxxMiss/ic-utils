@@ -39,7 +39,7 @@ pkgs.forEach(p => {
         'type': 'git',
         'url': `https://github.com/xxxxxMiss/ic-utils/tree/master/packages/${p}`
       },
-      keyword: [p],
+      keywords: ['vue', p],
       author: 'xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)',
       license: 'MIT'
     }

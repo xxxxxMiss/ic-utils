@@ -8,7 +8,8 @@
     "type": "git",
     "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view"
   },
-  "keyword": [
+  "keywords": [
+    "vue",
     "into-view"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",

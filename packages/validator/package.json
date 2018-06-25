@@ -8,7 +8,8 @@
     "type": "git",
     "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/validator"
   },
-  "keyword": [
+  "keywords": [
+    "vue",
     "validator"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",

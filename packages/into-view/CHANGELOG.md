@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/compare/ic-into-view@1.2.2...ic-into-view@1.2.3) (2018-07-04)
+
+
+
+
+**Note:** Version bump only for package ic-into-view
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/compare/ic-into-view@1.2.1...ic-into-view@1.2.2) (2018-06-25)
 

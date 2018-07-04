@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/focus/compare/ic-vue-focus@1.1.3...ic-vue-focus@1.1.4) (2018-07-04)
+
+
+
+
+**Note:** Version bump only for package ic-vue-focus
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/focus/compare/ic-vue-focus@1.1.2...ic-vue-focus@1.1.3) (2018-06-25)
 

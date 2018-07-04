@@ -1,6 +1,6 @@
 {
   "name": "ic-into-view",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A lightly library for rapid daily development",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -11,6 +11,9 @@
   "keywords": [
     "vue",
     "into-view"
+  ],
+  "externals": [
+    "ic-utils"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "MIT"

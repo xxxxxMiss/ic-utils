@@ -1,6 +1,6 @@
 {
   "name": "ic-vue-fullsceen",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A Vue directive for browser into a fullscreen mode",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -11,6 +11,9 @@
   "keywords": [
     "vue",
     "fullpage"
+  ],
+  "externals": [
+    "ic-utils"
   ],
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "MIT"

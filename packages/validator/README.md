@@ -22,12 +22,14 @@
 {
     rules: {
         email: 'email'
-        phone: ['required', 'length:11'],
+        phone: 'required|length:11',
+        // => { key: 'phone': rules: [{ rule: 'required', params: [] }, { rule: 'length', parmas: [11] } ] } ✅
+        // => { key: 'phone', rules: [['required'], ['length', [11]]] }
         password: [/^[0-9a-zA-Z]{6,18}$/, 'confirmed'],
         date: 'between:now,2019-01-01',
         startDate: 'before:now',
     },
-    message: {
+    messages: {
         email: 'it is not a valid email',
         phone: {
             required: 'phone is not allowed empty',

@@ -24,7 +24,8 @@ module.exports = {
           "/plugins/qrcode",
           "/plugins/share",
           "/plugins/track",
-          "/plugins/util"
+          "/plugins/util",
+          "/plugins/validator"
         ]
       }
     }

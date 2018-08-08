@@ -3,7 +3,7 @@ const fs = require('fs')
 const _ = require('lodash')
 const uppercamelcase = require('uppercamelcase')
 const webpack = require('webpack')
-const chalk = require('chalk')
+const signale = require('signale')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -23,15 +23,15 @@ function getConfig ({ path, library, externals }) {
       libraryTarget: 'umd',
       // umdNamedDefine: true
     },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          loader: 'babel-loader'
-        }
-      ]
-    }
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.js$/,
+    //       exclude: /(node_modules)/,
+    //       loader: 'babel-loader'
+    //     }
+    //   ]
+    // }
   }
   if (externals) {
     config.externals = externals
@@ -50,11 +50,20 @@ const configs = _.xor(pkgs, ignorePkgs).map(dir => {
 })
 
 configs.forEach(c => webpack(c, (err, stats) => {
-  if (err) console.error(chalk.red(err.message))
+  if (err) {
+    if (err.details) {
+      return signale.fatal(err.details)
+    }
+    return signale.fatal(err.stack || err)
+  }
+
+  if (stats.hasErrors()) {
+    return signale.fatal(stats.toJson().errors)
+  }
 
   if (isProd) {
-    console.log(chalk.green('build prod-completed'))
+    signale.success('build prod-completed')
   } else {
-    console.log(chalk.blue('build dev-completed'))
+    signale.success('build dev-completed')
   }
 }))

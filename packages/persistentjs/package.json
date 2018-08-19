@@ -1,0 +1,17 @@
+{
+  "name": "ic-persistentjs",
+  "version": "1.0.0",
+  "description": "A lightly library for rapid daily development",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxxxxMiss/ic-utils/tree/master/packages/persistentjs"
+  },
+  "keywords": [
+    "vue",
+    "persistentjs"
+  ],
+  "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
+  "license": "MIT"
+}

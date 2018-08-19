@@ -7,3 +7,5 @@ export const isAndroid = /Android|Adr/i.test(UA)
 export const isWechat = /MicroMessenger/i.test(UA)
 
 export const isMobile = /Mobile/i.test(UA)
+
+export const isIE = /(msie|trident)/i.test(UA)

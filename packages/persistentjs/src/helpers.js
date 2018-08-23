@@ -4,8 +4,8 @@ const h = m * 60
 const d = h * 24
 const w = d * 7
 const y = d * 365
-
-export function parse (str) {
+// this code modified from https://github.com/zeit/ms
+function parse (str) {
   str = String(str)
   if (str.length > 100) {
     return
@@ -62,22 +62,12 @@ export function parse (str) {
   }
 }
 
-export function maxAgeToGMT (maxAge) {
-  return maxAge === Infinity
-    ? 'Fri, 31 Dec 9999 23:59:59 GMT'
-    : new Date(new Date(maxAge * 1e3) + Date.now()).toUTCString()
-}
+export function parseTimeStr (str) {
+  const ms = parse(str)
 
-export function parseCookie (cookieStr = '', decode = window.atob) {
-  const result = []
-  const pieces = cookieStr.split(/\s*/)
+  if (!ms) throw TypeError(`invalid param: ${str}`)
 
-  pieces.forEach(item => {
-    const [key, value] = item.split('=')
-    result.push([decode(key), decode(value)])
-  })
-
-  return result
+  return new Date(Date.now() + ms)
 }
 
 export function deserialize (serializedJavascript) {

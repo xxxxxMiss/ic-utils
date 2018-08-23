@@ -1,58 +1,51 @@
-import { maxAgeToGMT, parse, parseCookie } from './helpers'
+import Cookies from 'js-cookie'
+import { parseTimeStr } from './helpers'
+
+function parseCookie () {
+  const json = Cookies.getJSON()
+  const pairs = []
+  for (const key in json) {
+    pairs.push([key, json[key]])
+  }
+  return new Map(pairs)
+}
 
 export default class Cookie {
-  constructor () {
-    const cookies = parseCookie(document.cookie)
-    this.cookies = new Map(cookies)
+  constructor (config = {}) {
+    Cookies.defaults = config
   }
 
   setItem (key, value, config = {}) {
-    try {
-      const result = JSON.stringify(value)
-      if (/^[\[\{]/.test(result)) {
-        value = result
-      }
-    } catch (error) {
-      throw error
+    const expires = config.expires
+    if (expires && typeof expires === 'string') {
+      config.expires = parseTimeStr(expires)
     }
-    
-    let pair = `${window.btoa(key)}=${window.btoa(value)}`
+    if (expires === Infinity) {
+      config.expires = new Date('Fri, 31 Dec 9999 23:59:59 GMT')
+    }
 
-    for (const name in config) {
-      if (config[name] && config[name] !== true) {
-        pair += `; ${name}=${config[name]}`
-      } else if (config[name]) {
-        pair += `; ${config[name]}`
-      }
-    }
-    document.cookie = pair
-
-    if (value) {
-      this.cookies.set(key, value)
-    }
+    return Cookies.set(key, value, config)
   }
 
   getItem (key) {
-    return this.cookies.get(key) || null
+    return Cookies.getJSON(key)
   }
 
   removeItem (key, config) {
-    this.setItem(key, '', config)
-    this.cookies.delete(key)
+    return Cookies.remove(key, config)
   }
 
   clear () {
-    [...this.cookies.keys()].forEach(key => {
-      this.setItem(key, '')
+    [...parseCookie().keys()].forEach(key => {
+      Cookies.remove(key)
     })
-    this.cookies.clear()
   }
 
   length () {
-    return this.cookies.size
+    return parseCookie().size
   }
 
   key (index) {
-    return [...this.cookies.keys()][index]
+    return [...parseCookie().keys()][index]
   }
 }

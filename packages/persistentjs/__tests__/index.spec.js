@@ -23,3 +23,8 @@ describe('persist(options)', () => {
     expect(cookieInstant).toBeInstanceOf(Cookie)
   })
 })
+
+test('options can be a string represent a type', () => {
+  const storage = persist('session')
+  expect(storage.getItem).toBeDefined()
+})

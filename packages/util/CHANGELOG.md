@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/util/compare/ic-utils@1.0.17...ic-utils@1.1.0) (2018-09-14)
+
+
+### Features
+
+* add axios extension ([10db4ae](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/util/commit/10db4ae))
+* add persistentjs package ([1d0ce3c](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/util/commit/1d0ce3c))
+
+
+
+
 <a name="1.0.17"></a>
 ## [1.0.17](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/util/compare/ic-utils@1.0.16...ic-utils@1.0.17) (2018-07-04)
 

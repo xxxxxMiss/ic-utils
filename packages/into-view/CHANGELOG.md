@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/compare/ic-into-view@1.2.3...ic-into-view@1.3.0) (2018-09-14)
+
+
+### Features
+
+* add axios extension ([10db4ae](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/commit/10db4ae))
+* add persistentjs package ([1d0ce3c](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/commit/1d0ce3c))
+
+
+
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/xxxxxMiss/ic-utils/tree/master/packages/into-view/compare/ic-into-view@1.2.2...ic-into-view@1.2.3) (2018-07-04)
 

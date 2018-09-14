@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/xxxxxMiss/ic-utils/compare/ic-axios@1.1.0...ic-axios@1.2.0) (2018-09-14)
+
+
+### Features
+
+* add axios extension ([10db4ae](https://github.com/xxxxxMiss/ic-utils/commit/10db4ae))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/xxxxxMiss/ic-utils/compare/ic-axios@1.0.2...ic-axios@1.1.0) (2018-06-12)
 

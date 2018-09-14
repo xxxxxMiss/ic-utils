@@ -1,6 +1,6 @@
 {
   "name": "ic-utils",
-  "version": "1.0.17",
+  "version": "1.1.0",
   "description": "A common assertion library is convenient for daily development",
   "main": "dist/index.js",
   "module": "src/index.js",

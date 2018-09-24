@@ -4,7 +4,8 @@
 
 import { isPureObj } from 'ic-utils'
 
-export default function install (Vue, options = {}) {
+export default function install (Vue, options) {
+  options = options || {}
   const DEFAULTS = {
     behavior: 'auto',
     block: 'start',

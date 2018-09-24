@@ -6,7 +6,7 @@
   "scripts": {
     "pub": "npm run build:prod && sudo lerna publish --conventional-commits",
     "commitmsg": "commitlint -e $GIT_PARMAS",
-    "test": "jest",
+    "test": "jest && codecov",
     "build": "npm run build:dev && npm run build:prod",
     "build:dev": "cross-env NODE_ENV=development node webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production node webpack.config.js",
@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.7.0",
     "chalk": "^2.4.1",
     "clean-webpack-plugin": "^0.1.19",
+    "codecov": "^3.1.0",
     "cross-env": "^5.2.0",
     "dayjs": "^1.6.10",
     "eslint": "^4.19.1",
@@ -68,10 +69,13 @@
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
     ],
-    "collectCoverage": false,
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,vue}",
       "!**/node_modules/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/axios|canvas|clickoutsize|clipboard|dictionary|focus|format|fullscreen|into-view|jsonp|qrcode|scrollto|share|track|util|validator/"
     ]
   },
   "ava": {
